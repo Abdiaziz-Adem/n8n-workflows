@@ -6,13 +6,11 @@
 data/
 shared/
 
-# Environment files with secrets
-.env.local
-.env.production
-.env.*.local
+# Environment files with secrets (including the local .env)
+.env
+.env.*
+!.env.example
 
-# Keep .env as template but ignore overrides
-!.env
 
 # OS files
 .DS_Store
