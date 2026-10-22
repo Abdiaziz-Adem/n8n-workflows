@@ -4,6 +4,14 @@
 
 A single-command deployable stack for AI-powered workflow automation with image generation capabilities.
 
+## 🔐 Private local configuration
+
+- A safe example is provided in [`.env.example`](.env.example). Docker Compose can use its default values without any `.env` file.
+- If you need custom settings, copy `.env.example` to `.env` **on your own computer** and edit it locally. Never commit `.env`, passwords, tokens, or actual credentials to GitHub.
+- Local services are bound to `127.0.0.1` (the same computer); do not make these ports internet-accessible without configuring authentication and HTTPS.
+- The former tracked `.env` file was removed from the current branch, but prior Git commits may still contain its old contents. Rotate any real credential if you ever put one there.
+
+
 ---
 
 ## 📚 Documentation
@@ -65,7 +73,8 @@ That's it! The script will:
 ```
 ai-stack/
 ├── docker-compose.yml      # Main stack configuration
-├── .env                    # Environment variables
+├── .env.example            # Public safe configuration template
+├── .env                    # Local overrides (ignored by Git)
 ├── start.ps1               # Windows startup script
 ├── start.sh                # Linux/macOS startup script
 ├── README.md               # This file
