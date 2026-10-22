@@ -17,7 +17,7 @@ services:
     image: n8nio/n8n:latest
     container_name: ai-stack-n8n
     ports:
-      - "5678:5678"
+      - "127.0.0.1:5678:5678"
     environment:
       # Core configuration
       - N8N_HOST=localhost
@@ -54,7 +54,7 @@ services:
     container_name: ai-stack-agent-zero
     ports:
       # Agent Zero web UI is on container port 80
-      - "50080:80"
+      - "127.0.0.1:50080:80"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
     volumes:
@@ -75,7 +75,7 @@ services:
     image: aidockorg/comfyui-cuda:latest
     container_name: ai-stack-comfyui
     ports:
-      - "8188:8188"
+      - "127.0.0.1:8188:8188"
     environment:
       - CLI_ARGS=--listen 0.0.0.0 --port 8188
     volumes:
@@ -112,7 +112,7 @@ services:
   #   image: frdel/comfyui-docker:latest
   #   container_name: ai-stack-comfyui-cpu
   #   ports:
-  #     - "8188:8188"
+  #     - "127.0.0.1:8188:8188"
   #   environment:
   #     - CLI_ARGS=--listen 0.0.0.0 --port 8188 --cpu
   #   volumes:
