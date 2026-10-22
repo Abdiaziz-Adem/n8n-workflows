@@ -1,5 +1,7 @@
 # n8n Workflow Collection
 
+> **Project attribution:** This repository includes the [n8n workflow collection by Zie619 and its contributors](https://github.com/Zie619/n8n-workflows). The original collection, documentation, statistics, donation links, and other upstream materials below belong to their respective authors. See the included [MIT license](LICENSE). This repository also includes an `ai-stack/` directory for local AI tooling. The entire collection should not be presented as independently authored work.
+
 <div align="center">
 
 ![n8n Workflows](https://img.shields.io/badge/n8n-Workflows-orange?style=for-the-badge&logo=n8n)
